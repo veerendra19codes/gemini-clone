@@ -11,7 +11,6 @@ export default function Home() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log(process.env.NEXT_PUBLIC_GEMINI_PRO_API_KEY)
     setAnswer("Loading...")
     const response = await axios({
       url: `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${process.env.NEXT_PUBLIC_GEMINI_PRO_API_KEY}`,
